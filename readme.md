@@ -96,3 +96,5 @@ git stash apply stash@{1}
        ↓
 Apply + keep stash
 
+# dealing with commit now
+
