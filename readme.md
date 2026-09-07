@@ -55,5 +55,44 @@ Your change is now sitting in the staging area, waiting for a commit.
 
 # git commit -m "message" ----> Your photograph is been clicked and changes are saved now
 
+# git stash --> is a Git command used to temporarily save uncommitted changes in your working directory so you can work on something else without committing those changes.
 
+If you want to check whether you currently have anything stored in Git stash, the main command is:
+
+# git stash list
+If you have stashes
+
+You'll see something like:
+
+stash@{0}: WIP on main: abc1234 Initial commit
+stash@{1}: WIP on feature-login: def5678 Login page
+
+This means you have 2 stashes.
+
+stash@{0} → most recent stash
+stash@{1} → older stash
+
+if we need to bring back a particular stash
+git stash pop stash@{1}
+
+This will:
+
+Apply the changes from stash@{1}
+Remove that stash from the stash list
+If you want to bring it back but KEEP the stash
+
+Use:
+
+git stash apply stash@{1}
+
+Difference:
+
+git stash pop stash@{1}
+       ↓
+Apply + delete stash
+
+
+git stash apply stash@{1}
+       ↓
+Apply + keep stash
 
